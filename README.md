@@ -4,7 +4,7 @@
 
 
 
-Endpoint can be called as file's path in root folder"file" , and there's two way below to present.
+Endpoint can be called as file's path in root folder"file" , and there're two way below to present.
 
 ex1 : https://localhost:44368/file/
 
