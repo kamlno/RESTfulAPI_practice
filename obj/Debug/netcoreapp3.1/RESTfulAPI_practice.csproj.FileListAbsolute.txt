@@ -19,3 +19,17 @@ C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice
 C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\obj\Debug\netcoreapp3.1\RESTfulAPI_practice.dll
 C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\obj\Debug\netcoreapp3.1\RESTfulAPI_practice.pdb
 C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\obj\Debug\netcoreapp3.1\RESTfulAPI_practice.genruntimeconfig.cache
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\88698\OneDrive\Desktop\practice\RESTfulAPI_practice\RESTfulAPI_practice\obj\Debug\netcoreapp3.1\RESTfulAPI_practice.csproj.CopyComplete

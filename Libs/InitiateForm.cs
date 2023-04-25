@@ -1,26 +1,40 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System;
 
 namespace RESTfulAPI_practice.Libs
 {
     public class Initiate
     {
-        public static List<Models.Form> InitiateList(string Path1="", string Path2="",
+        public static string CheckUrl(string Path1="",string Path2="")
+        {
+            var CurrentPath = Directory.GetCurrentDirectory();
+
+            //Combine Path
+            if (Path1 != "" && Path2 != "") CurrentPath = Path.Combine(CurrentPath, "File", Path1, Path2);
+            else if (Path1 != "") CurrentPath = Path.Combine(CurrentPath, "File", Path1);
+            else CurrentPath = Path.Combine(CurrentPath, "File");
+
+            return CurrentPath;
+        }
+        public static bool CheckFile(string Path)
+        {
+            FileAttributes fileAttributes = File.GetAttributes(Path);
+
+            if (fileAttributes.HasFlag(FileAttributes.Directory))
+            { 
+                return false;
+            }
+            else return true;
+        }
+        public static List<Models.Form> InitiateList(string Path="",
             string orderBy="lastmodified",string direction = "descending",string filterByName="")
         {
             List<Models.Form> FormList = new List<Models.Form>();
 
-            //Combine Path
-            var CurrentPath = Directory.GetCurrentDirectory();
-
-            if (Path1 != "" && Path2 != "") CurrentPath = Path.Combine(CurrentPath, "File", Path1 , Path2);
-            else if(Path1!="") CurrentPath = Path.Combine(CurrentPath, "File", Path1);
-            else CurrentPath = Path.Combine(CurrentPath, "File");
-            //Combine Path
-
             //Creat Wrapper 
-            DirectoryInfo CurrentDirectory = new DirectoryInfo(CurrentPath);
+            DirectoryInfo CurrentDirectory = new DirectoryInfo(Path);
             FileSystemInfo[] baseDir = CurrentDirectory.GetFileSystemInfos();
 
             //Initiate List By Wrapper
@@ -32,12 +46,18 @@ namespace RESTfulAPI_practice.Libs
                 if (!info.Attributes.HasFlag(FileAttributes.Directory))
                 {
                     FileInfo Tmp = new FileInfo(info.FullName);
-                    Form.Size = Tmp.Length.ToString();
+                    Form.Size = Tmp.Length;
+                    Form.type = "file";
                 }
-                else Form.Size = "Directory";
-
+                else
+                {
+                    Form.Size = -1;
+                    Form.type = "directory";
+                }
                 FormList.Add(Form);
             }
+            //Filter Pipeline
+            FormList = FilterByName(FormList, filterByName);
 
             //Order Pipeline
             FormList = OrderBy(FormList, orderBy, direction);
@@ -85,9 +105,26 @@ namespace RESTfulAPI_practice.Libs
             return FormList;
         }
         
-        public static void FilterByName(List<Models.Form> FormList)
+        public static List<Models.Form> FilterByName(List<Models.Form> FormList,string filterByName = "")
         {
-            
+            if(filterByName =="") return FormList;
+
+            else
+            {
+                List<Models.Form> FilteredList = new List<Models.Form>();
+
+                foreach (Models.Form Form in FormList)
+                {
+                    if (Form.Name.Contains(filterByName)) FilteredList.Add(Form);
+                }
+
+                if (FilteredList.Count <= 0)
+                {
+                    Models.Form res = new Models.Form() { Name = "結果不存在!" };
+                    FilteredList.Add(res);
+                }
+                return FilteredList;
+            }
         }
 
         //unuse
@@ -114,9 +151,14 @@ namespace RESTfulAPI_practice.Libs
                 if (!baseDir[i].Attributes.HasFlag(FileAttributes.Directory))
                 {
                     FileInfo Tmp = new FileInfo(baseDir[i].FullName);
-                    Form.Size = Tmp.Length.ToString();
+                    Form.Size = Tmp.Length;
+                    Form.type = "file";
                 }
-                else Form.Size = "Directory";
+                else
+                {
+                    Form.Size = -1;
+                    Form.type = "directory";
+                }
 
                 FormArray[i] = Form;
             }

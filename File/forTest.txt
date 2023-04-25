@@ -1,9 +1,5 @@
-URLs are what makes the web the web. In ASP.NET Core Controllers, Razor Pages, and Razor views, there's a Request property which gives you access to the HttpRequest instance. The HttpRequest object gives you access to scheme, host (which is the domain and port), path, query string, body content, and headers of the incoming HTTP request.
-
-If you need to know what the full URL is of your web application, you can put the URL together by grabbing the Scheme, Host, PathBase, Path, and QueryString and combining it like this:
-
-$"{Request.Scheme}://{Request.Host}{Request.PathBase}{Request.Path}{Request.QueryString}"
-Maybe you're only interested in the URL without the path and query string, in which case you can omit the PathBase, Path, and QueryString parameter from the string interpolation:
-
-$"{Request.Scheme}://{Request.Host}"
-If you want to generate URLs for your application, I suggest you use the UrlHelper as explained in this blog post about generating absolute URLs.
+Second Test
+Hello
+And
+Welcome
+This is a test write

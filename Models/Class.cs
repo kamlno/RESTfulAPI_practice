@@ -19,11 +19,5 @@ namespace RESTfulAPI_practice.Models
         }
         public bool isDirectory { set; get; }
         public List<string> file { set; get; }
-
-        //public string[] test { set; get; }
-        //public string test1 => "1";
-        //public string test2 => "1";
-        //public string test3 => "1";
-        //public string test4 => "1";
     }
 }

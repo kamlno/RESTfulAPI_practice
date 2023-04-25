@@ -6,6 +6,7 @@ namespace RESTfulAPI_practice.Models
     {
         public string Name { set; get; }
         public DateTime LastModified { set; get; }
-        public string Size { set; get; }
+        public long Size { set; get; }
+        public string type { set; get; }
     }
 }
