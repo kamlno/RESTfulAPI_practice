@@ -62,14 +62,17 @@ this will return files'detail by JSON like :
 
 
 
-* FEATURE:
+* FEATURE
 
 
 
 These contents can be filtered by filename and sort by "size"、"lastmodified".
 
-orderBy:"filename"、"size"、"lastmodified"
-directions:"descending"、"ascending"
+    parameters:
+   
+    orderBy : "filename"、"size"、"lastmodified"
+
+    directions : "descending"、"ascending"
 
 ex3 : https://localhost:44368/file/list?orderBy=size&direction=ascending 
 
