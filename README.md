@@ -25,7 +25,7 @@ this will return a JSON list with a bool and filenames list like :
 
 ex2 : https://localhost:44368/file/list/
 
-this will return files'detail by JASON like :
+this will return files'detail by JSON like :
 
     [
         {
